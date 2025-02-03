@@ -1,55 +1,66 @@
 <!DOCTYPE html>
-<h1> Days Without OPM Data Leaked to War Thunder Forums </h1>
 
-<p>On Saturday, February 1st, 2025 Elon Musk's <b>Department of Oligarchs Grabbing Everything (DOGE)</b>
-  <br> gained access to data in the Office of Personnel Management (OPM), and to U.S. Treasury payment
-  <br> systems.
-  <br>
-  <br> <a href=https://www.wired.com/story/elon-musk-government-young-engineers/>Wired Article</a>
-  <br>
-  <br> So, basically all of the personal information is now in the hands of a few young edgelords. we
-  <br> know how this goes. How long will it be before the personal information of every U.S. citizen
-  <br> is leaked to the War Thunder forums?
+<header>
+  <title>Has OPM Data Leaked Yet</title>
+  <style>
+    body {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+      text-align: center;
+    }
+    #footer {
+      font-size: 0.8rem;
+    }
+  </style>
+</header>
+
+<body>
+  <h1> Days Without OPM Data Leaked to War Thunder Forums </h1>
+
+  <p>On Saturday, February 1st, 2025 Elon Musk's <b>Department of Oligarchs Grabbing Everything (DOGE)</b>
+    <br> gained access to data in the Office of Personnel Management (OPM), and to U.S. Treasury payment
+    <br> systems.
+    <br>
+    <br> <a href=https://www.wired.com/story/elon-musk-government-young-engineers />Wired Article</a>
+    <br>
+    <br> So, basically all of the personal information is now in the hands of a few young edgelords. we
+    <br> know how this goes. How long will it be before the personal information of every U.S. citizen
+    <br> is leaked to the War Thunder forums?
   </p>
 
+  <!-- Display the countdown timer in an element -->
+  <h1>
+    <p id="leakCounter"></p>
+    <script>
+      // Set the date we're counting down to
+      var startDate = new Date("Feb 1, 2025 00:00:00").getTime();
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = now - startDate;
 
-<!-- Display the countdown timer in an element -->
-<center><h1>
-<p id="leakCounter"></p>
-<script>
-// Set the date we're counting down to
-var startDate = new Date("Feb 1, 2025 00:00:00").getTime();
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+        // Display the result in the element with id="leakCounter"
+        document.getElementById("leakCounter").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("leakCounter").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
+  </h1>
 
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = now - startDate;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="leakCounter"
-  document.getElementById("leakCounter").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("leakCounter").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-</center></h1>
-
-<!-- footer whynot -->
-<font size=2><center> (this webshit made with <s>love</s> <b>pure hate</b>, using vim) </center></font>
-
+  <!-- footer whynot -->
+  <div id="footer">(this webshit made with <s>love</s> <b>pure hate</b>, using vim)</div>
+</body>
 </html>
-
